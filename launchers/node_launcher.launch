@@ -1,0 +1,13 @@
+<launch>
+
+	<node pkg="ros_nodes" type="cameras.py" name="CAMERAS" />
+
+	<node pkg="ros_nodes" type="controls.py" name="CONTROLS" />
+
+	<node pkg="ros_nodes" type="lidar.py" name="LIDAR" />
+
+	<node pkg="ros_nodes" type="sensors.py" name="SENSORS" />
+
+	<node pkg="ros_nodes" type="smach.py" name="SMACH" />
+
+</launch>
