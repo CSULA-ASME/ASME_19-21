@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+#Code is not finished. Errors still present.
 import rospy
 from sensor_msgs.msg import LaserScan
 from ros_nodes.msg import lidar2smach
