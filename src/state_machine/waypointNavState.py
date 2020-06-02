@@ -23,12 +23,12 @@ class Waypoint_Navigation(smach.State):
 	def execute(self, userdata):
 		sensors_data_sent = self.sensors_sub.was_data_sent()
 		print (sensors_data_sent)
-		while (sensors_data_sent == False): #If no data received in 6 seconds, Failed
-			time.sleep(0.01)
-			sensors_data_sent = self.sensors_sub.was_data_sent()
-			if (self.counter > 600):
-				return 'Failed'
-			self.counter = self.counter + 1
+# 		while (sensors_data_sent == False): #If no data received in 6 seconds, Failed
+# 			time.sleep(0.01)
+# 			sensors_data_sent = self.sensors_sub.was_data_sent()
+# 			if (self.counter > 600):
+# 				return 'Failed'
+# 			self.counter = self.counter + 1
 		sensors_data = self.sensors_sub.get_data()
 
 		goal_lat = 34.066010     #34 degs, 03.9606 mins (N) || 34 degs, 03 mins, 57.6 s (N)
